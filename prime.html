@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Number Prime</title>
+</head>
+<body>
+<button onclick="inNum()">In</button>
+<script>
+    function isPrime(num){
+        if(num<3)return false;
+        if (num==3)return true;
+        for (let i = 3; i <= Math.sqrt(num); i++) {
+            if(num%i==0)return false;
+        }
+        return true;
+    }
+
+    function inNum() {
+        for (let i = 3; i <= 10000; i++) {
+            if (isPrime(i)) {
+                document.write(i + ', ')
+            }
+        }
+    }
+
+</script>
+</body>
+</html>
